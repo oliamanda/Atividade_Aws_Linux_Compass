@@ -22,6 +22,9 @@ Preparar a execução automatizada do script a cada 5 minutos.
 * Acessar a AWS na página do serviço EC2, e clicar em "Pares de chaves" no menu lateral esquerdo.
 * Clicar em "Criar par de chaves".
 * A tela de criação será aberta e nela você poderá escolher um nome para o par de chaves.
+* Selecione o formato .pem e mantenha as demais configurações;
+* Salve o arquivo .pem gerado em um local seguro.
+
 
  ![Texto Alternativo](https://github.com/oliamanda/Atividade_Aws_Linux_Compass/blob/main/cria%C3%A7%C3%A3o_par_de_chaves.png?raw=true)
 
@@ -87,24 +90,24 @@ Preparar a execução automatizada do script a cada 5 minutos.
 
 
 # Linux >> Configuração do NFS com o IP fornecido
-* Criar um novo diretório para o NFS usando o comando sudo mkdir /mnt/nfs.
-* Montar o NFS no diretório criado usando o comando sudo mount IP_OU_DNS_DO_NFS:/ /mnt/nfs.
-* Verificar se o NFS foi montado usando o comando df -h.
+* Criar um novo diretório para o NFS usando o comando 'sudo mkdir /mnt/nfs'.
+* Montar o NFS no diretório criado usando o comando 'sudo mount IP_OU_DNS_DO_NFS:/ /mnt/nfs'.
+* Verificar se o NFS foi montado usando o comando 'df -h'.
 * Configurar o NFS para montar automaticamente no boot usando o comando sudo nano /etc/fstab.
-* Adicionar a seguinte linha de comando no arquivo /etc/fstab:
+* Adicionar a seguinte linha de comando no arquivo '/etc/fstab':
 * Ex: IP_OU_DNS_DO_NFS:/ /mnt/nfs nfs defaults 0 0
-* Salvar o arquivo /etc/fstab.
+* Salvar o arquivo '/etc/fstab'.
 * Criar um novo diretório para o usuário com seu nome;
-Ex: usando o comando sudo mkdir /mnt/nfs/amandaoliveira
+Ex: usando o comando 'sudo mkdir /mnt/nfs/amandaoliveira'
 
 
 # Linux >> Configuração do Apache.
 ## EXECUTE OS SEGUINTES COMANDOS ABAIXO:
-* Executar o comando sudo yum update -y para atualizar o sistema.
-* Executar o comando sudo yum install httpd -y para instalar o apache.
-* Executar o comando sudo systemctl start httpd para iniciar o apache.
-* Executar o comando sudo systemctl enable httpd para habilitar o apache para iniciar automaticamente.
-* Executar o comando sudo systemctl status httpd para verificar o status do apache.
+* Executar o comando 'sudo yum update -y' para atualizar o sistema.
+* Executar o comando 'sudo yum install httpd -y' para instalar o apache.
+* Executar o comando 'sudo systemctl start httpd' para iniciar o apache.
+* Executar o comando 'sudo systemctl enable httpd' para habilitar o apache para iniciar automaticamente.
+* Executar o comando 'sudo systemctl status httpd' para verificar o status do apache.
 
 
   # Linux >> Configurar o script de validação.
@@ -117,17 +120,18 @@ Ex: usando o comando sudo mkdir /mnt/nfs/amandaoliveira
 
 ![Texto Alternativo](https://github.com/oliamanda/Atividade_Aws_Linux_Compass/blob/main/script.png?raw=true)
 
-* Salve o arquivo de script usando ctrl+x > y > enter
-* Execute o comando chmod +x script.sh para tornar o arquivo de script executável.
-* Execute o comando  ./script.sh para executar o script.
-* Salve o arquivo de cronjob usando ctrl+x > y > enter
-* Execute o comando crontab -l para verificar se o cronjob foi configurado corretamente
+* Salve o arquivo de script usando 'ctrl+x > y > enter'
+* Execute o comando 'chmod +x script.sh' para tornar o arquivo de script executável.
+* Execute o comando  './script.sh' para executar o script.
 
 
 # Linux >> Configuração da execução do script de validação a cada 5 minutos.
 * Execute o comando  EDITOR=nano crontab -e  para editar o cronjob.
 * Adicione a seguinte linha de código no arquivo de cronjob:
-* */5 * * * * /home/ec2-user/script.sh
+* '*/5 * * * * /home/ec2-user/script.sh'
+* * Salve o arquivo de cronjob usando 'ctrl+x > y > enter'
+* Execute o comando 'crontab -l' para verificar se o cronjob foi configurado corretamente
+
 
  # Referências 📚
 ## Documentação oficial Amazon AWS fornecidas nas aulas: https://docs.aws.amazon.com/pt_br/
