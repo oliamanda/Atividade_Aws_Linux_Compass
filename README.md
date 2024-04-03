@@ -23,7 +23,7 @@ Preparar a execução automatizada do script a cada 5 minutos.
 * Clicar em "Criar par de chaves".
 * A tela de criação será aberta e nela você poderá escolher um nome para o par de chaves.
 
- ![Texto Alternativo](https://drive.google.com/file/d/1ec7_Oi9D-m34rZBJm_FwrtJgQrkIbEtl/view)
+ ![Texto Alternativo](Captura de tela de 2024-04-03 00-16-48.png)
 
  # AWS >> Criação de uma VPC
 * Acessar a AWS na página do serviço VPC, e clicar em "Criar VPC";
