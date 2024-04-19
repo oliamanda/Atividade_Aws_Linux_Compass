@@ -128,7 +128,7 @@ Ex: usando o comando 'sudo mkdir /mnt/nfs/amandaoliveira'
 # Linux >> Configuração da execução do script de validação a cada 5 minutos.
 * Execute o comando  EDITOR=nano crontab -e  para editar o cronjob.
 * Adicione a seguinte linha de código no arquivo de cronjob:
-* '*/5 * * * * /home/ec2-user/script.sh'
+* '*/5 * * * * /home/ec2-user//amandaoliveira/script.sh'
 * * Salve o arquivo de cronjob usando 'ctrl+x > y > enter'
 * Execute o comando 'crontab -l' para verificar se o cronjob foi configurado corretamente
 
